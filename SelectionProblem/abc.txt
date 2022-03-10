@@ -1,0 +1,3 @@
+do all your practice problems inside this directory 
+make separate file for each problem
+
