@@ -1,0 +1,14 @@
+#!/bin/bash -x
+
+isFullTime=1
+isPartTime=2
+empRatePerHr=20
+randomCheck=$((RANDOM%3))
+if [ $randomCheck -eq $isFullTime ]
+then
+	empHrs=8
+	salary=$(($empR
+else
+	salary=0
+fi
+echo "employee salary: "$salary
