@@ -28,4 +28,4 @@ do
 	((totalWorkingDays++))
 done
 totalSalary=$(($totalWorkingHrs*$empRatePerHr))
-echo "employee total salary for the month: "$totalSalary
+echo "employee total salary for a month: "$totalSalary
