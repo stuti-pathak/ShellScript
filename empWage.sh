@@ -19,9 +19,7 @@ do
 					*) empHrs=0
 						;;
 	esac
-	#salary=$(($empRatePerHr*$empHrs))
 	totalWorkingHrs=$(($totalWorkingHrs+$empHrs))
-	#totalSalary=$(($totalSalary+$salary))
 	((totalWorkingDays++))
 done
 totalSalary=$(($totalWorkingHrs*$empRatePerHr))
