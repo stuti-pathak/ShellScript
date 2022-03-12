@@ -24,9 +24,7 @@ while [[ $totalWorkingDays -le $maxWorkingDays && $totalWorkingHrs -lt $maxWorki
 do
 	empCheck=$((RANDOM%3))
 	empHrs="$( getEmpHrs $empCheck )"
-	#salary=$(($empRatePerHr*$empHrs))
 	totalWorkingHrs=$(($totalWorkingHrs+$empHrs))
-	#totalSalary=$(($totalSalary+$salary))
 	((totalWorkingDays++))
 done
 totalSalary=$(($totalWorkingHrs*$empRatePerHr))
