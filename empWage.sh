@@ -34,7 +34,7 @@ do
 	((totalWorkingDays++))
 done
 totalSalary=$(($totalWorkingHrs*$empRatePerHr))
-echo "employee total salary for a month: "$totalSalary
+echo "employee total salary for the month: "$totalSalary
 for ((count=1;count<=$maxWorkingDays;count++))
 do
 	echo Day $count:${dailyWage["Day "$count]}
