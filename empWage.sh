@@ -8,6 +8,7 @@ maxWorkingHrs=100
 totalSalary=0
 totalWorkingDays=1
 totalWorkingHrs=0
+declare -A dailyWage 
 
 function getEmpHrs(){
 	case $1 in 
@@ -29,9 +30,12 @@ do
 	empCheck=$((RANDOM%3))
 	empHrs="$( getEmpHrs $empCheck )"
 	totalWorkingHrs=$(($totalWorkingHrs+$empHrs))
-	dailyWage[$totalWorkingDays]="$( calculateDailyWage $empHrs)"
+	dailyWage["Day "$totalWorkingDays]="$( calculateDailyWage $empHrs)"
 	((totalWorkingDays++))
 done
 totalSalary=$(($totalWorkingHrs*$empRatePerHr))
 echo "employee total salary for a month: "$totalSalary
-echo "daily wages: "${dailyWage[@]}
+for ((count=1;count<=$maxWorkingDays;count++))
+do
+	echo Day $count:${dailyWage["Day "$count]}
+done
